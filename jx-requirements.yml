@@ -2,8 +2,9 @@ apiVersion: core.jenkins-x.io/v4beta1
 kind: Requirements
 spec:
   autoUpdate:
-    enabled: false
-    schedule: ""
+    enabled: true
+    schedule: "0 0 * * *"
+    autoMerge: true
   cluster:
     chartRepository: http://bucketrepo.jx/bucketrepo/charts
     clusterName: kind
